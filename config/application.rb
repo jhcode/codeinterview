@@ -22,5 +22,8 @@ module Interview
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.generators { |g| g.assets false }
+    config.action_mailer.delivery_method = :postmark
+    config.action_mailer.postmark_settings = { :api_key => "91079e01-7b3f-4a5a-9166-1423fc6f0338" }
   end
 end
