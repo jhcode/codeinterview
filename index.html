@@ -7,7 +7,7 @@
 </head>
 <body>
 <h2>Analyzing the portal controller</h2>
-<p>The <em>portal_controller.rb</em> file located <a href="https://gist.github.com/earthlingworks/f9ac0ddec96a253255b5#file-portal_controller-rb">here</a> is a controller file for <code>ruby < 4.0</code> as it uses requires in the controller.
+<p>The <em>portal_controller.rb</em> file located <a href="https://gist.github.com/earthlingworks/f9ac0ddec96a253255b5#file-portal_controller-rb">here</a> is a controller file for <code>rails < 4.0</code> as it uses requires in the controller.
 <p>The PortalController extends the ApplicationController and pre processes and it requires a HTML parser and CSS parser to process frontend code.</p>
 <p>For pre-processing purposes, <strong>before_filter</strong> is used to load protected and private methods load_proposal for export_to_pdf and canvas, log_pdf_export for export_to_pdf, create for info, and load_fee_precision for show, canvas, and export_to_pdf.</p>
 <p>Skipping authentication on the new_session and canvas actions allow those methods to be accessible by the application without a need for authenticating. </p>
